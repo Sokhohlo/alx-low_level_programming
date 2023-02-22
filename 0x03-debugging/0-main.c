@@ -8,10 +8,7 @@ int main(void)
 {
 int i;
 
-if (i < 0)
-{
-printf("%d is negative", i);
-}
-else
-printf("%d is positive", i);
+i = 0;
+positive_or_negative(i);
+return (0);
 }
