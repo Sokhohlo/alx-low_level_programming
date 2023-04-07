@@ -1,15 +1,13 @@
 #include "main.h"
 
-unsigned int mask;
-
-
+int set_bit(unsigned long int *n, unsigned int index)
+{
 if (index > 63)
-
 return (-1);
 
-mask = 1 << index;
-
+unsigned int mask = 1 << index;
 *n = (*n | mask);
 
 return (1);
+}
 

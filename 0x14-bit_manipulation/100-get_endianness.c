@@ -1,4 +1,4 @@
-#include "header.h"                                                                                                   /**
+#include "main.h"                                                                                                   /**
 * check_endianness - checks the endianness of the system
 *                                                          * Return: 0 if big endian, 1 if little endian              */
 int check_endianness(void)

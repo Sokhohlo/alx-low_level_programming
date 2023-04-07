@@ -1,34 +1,58 @@
-#include "main.h"
+#include <stdio.h>
 
-/**                                                        * convert_binary_to_uint - function to convert a binary number to an
-* unsigned integer.
-* @binary_string: binary string to be converted.
-*                                                          * Return: unsigned integer.
-*/
+/**
 
-unsigned int convert_binary_to_uint(const char *binary_string)
-{                                                              unsigned int uint_value;
-int string_length, base_two;
-if (!binary_string)
-return (0);
+ * bin_to_dec - converts a binary number to a decimal number.
 
-uint_value = 0;
-for (string_length = 0; binary_string[string_length] != ''; string_length++)
-;
+ * @bin: the binary number to convert.
 
-for (string_length--, base_two = 1; string_length >= 0; string_length--, base_two *= 2)
+ *
+
+ * Return: the decimal equivalent of the binary number.
+
+ */
+
+int bin_to_dec(const char *bin)
+
 {
-if (binary_string[string_length] != '0' && binary_string[string_length] != '1')
-{
-return (0);
-}
 
-if (binary_string[string_length] & 1)
-{
-uint_value += base_two;
-}
-}
+        int dec = 0, base = 1, i;
 
-return (uint_value);
+        if (!bin)
+
+                return 0; /* return 0 if the binary number is not valid*/
+
+        for (i = 0; bin[i]; i++)
+
+        {
+
+                if (bin[i] != '0' && bin[i] != '1')
+
+                {
+
+                        return 0; /* return 0 if the binary number is not valid*/
+
+                }
+
+        }
+
+        i--;
+
+        for (; i >= 0; i--, base *= 2)
+
+        {
+
+                if (bin[i] == '1')
+
+                {
+
+                        dec += base;
+
+                }
+
+        }
+
+        return dec;
+
 }
 
