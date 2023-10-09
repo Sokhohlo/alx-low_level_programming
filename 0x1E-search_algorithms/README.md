@@ -36,5 +36,5 @@ And value is the value to search for
 Your function must return the first index where value is located
 If value is not present in array or if array is NULL, your function must return -1
 Every time you compare a value in the array to the value you are searching, you have to print this value (see example below
-#AUTHOR JEROME UDOH, JUBASSTECH
+#AUTHOR sokhohlo sali
 
