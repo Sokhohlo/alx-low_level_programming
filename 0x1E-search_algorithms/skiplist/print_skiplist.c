@@ -25,4 +25,3 @@ void print_skiplist(const skiplist_t *list)
 	}
 	printf("\n");
 }
-
